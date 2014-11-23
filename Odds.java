@@ -1,6 +1,7 @@
 
 /**
- * Write a description of class Odds here.
+ * This class creates a random integer between 0 and 100 in the constructor. Later this can be tested
+ * against user defined percentages (or other classes calling an object of this class)
  * 
  * @author (Laurens op 't Zandt) 
  * @version (1)

@@ -9,7 +9,7 @@ public class RandomFunctions
 {
     /**
      * Constructor for objects of class RandomFunctions
-     * Nothing happens here because all of these functions are non-static
+     * Nothing happens here because all of these functions are static
      */
     public RandomFunctions()
     {
