@@ -18,10 +18,30 @@ public class RandomFunctions
     
     public static int randomInt(int min, int max)
     {
+        if(min>max)
+        {
+            return -15;
+        }
         max++;
         java.util.Random rand = new java.util.Random();
         int randomNumber = rand.nextInt(max-min)+min;
         return randomNumber;
     }
     
+    public static int odds(int[] inputOddsArray)
+    {
+        int importantRand = RandomFunctions.randomInt(1,100);
+        int counter = 0;
+        int previousSum = 0;
+        for(int chance : inputOddsArray)
+        {
+            previousSum+=chance;
+            if(importantRand<=previousSum){
+                return counter;
+            }
+            counter++;
+        }
+        return -15;
+    }
+
 }

@@ -4,4 +4,6 @@ comment0.target=RandomFunctions()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ RandomFunctions\r\n\ Nothing\ happens\ here\ because\ all\ of\ these\ functions\ are\ static\r\n
 comment1.params=min\ max
 comment1.target=int\ randomInt(int,\ int)
-numComments=2
+comment2.params=inputOddsArray
+comment2.target=int\ odds(int[])
+numComments=3

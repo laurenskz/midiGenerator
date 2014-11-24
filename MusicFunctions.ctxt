@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MusicFunctions()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ MusicFunctions\r\n
+comment1.params=number
+comment1.target=int\ resetBase(int)
+numComments=2
