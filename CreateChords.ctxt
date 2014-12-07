@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CreateChords()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ CreateChordProgression\r\n
+comment1.params=
+comment1.target=void\ create()
+comment1.text=\r\n\ \r\n\ \r\n\r\n\ \r\n
+comment2.params=length
+comment2.target=void\ setLength(int)
+comment3.params=scale
+comment3.target=void\ printChords(Scale)
+comment4.params=
+comment4.target=int\ getSize()
+comment5.params=index
+comment5.target=int\ getChord(int)
+numComments=6

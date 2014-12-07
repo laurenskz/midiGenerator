@@ -19,8 +19,14 @@ public class MusicFunctions
         if(number>6){
             number-=7;
         }
-        if(number<0){
-            number+=7;
+        return number;
+    }
+    
+    public static int resetBaseForAllNotes(int number)
+    {
+        if(number>11)
+        {
+            number-=12;
         }
         return number;
     }
