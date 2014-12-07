@@ -87,20 +87,6 @@ public class CreateChords
         create();
     }
     
-    public void printChords(Scale scale)
-    {
-        for(int chord : chordProgression)
-        {
-            if(chord==1||chord==2||chord==5)
-            {
-                System.out.println(scale.getAllNotes()[scale.getNotesInKey().get(chord)]+"m");
-            }else
-            {
-                System.out.println(scale.getAllNotes()[scale.getNotesInKey().get(chord)]);
-            }
-        }
-    }
-    
     public int getSize()
     {
         return chordProgression.size();
@@ -115,5 +101,10 @@ public class CreateChords
         {
             return -15;
         }
+    }
+    
+    public ArrayList<Integer> getChordProgression()
+    {
+        return chordProgression;
     }
 }

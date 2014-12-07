@@ -30,7 +30,7 @@ public class AllChords
     }
     
     
-    public void createTimeLayout()
+    private void createTimeLayout()
     {
         int noteOnTime = 0;
         int noteOffTime = 0;
@@ -44,7 +44,7 @@ public class AllChords
         }
     }
     
-    public void createActualNotes(SingleChordData chord)
+    private void createActualNotes(SingleChordData chord)
     {
         //Below an integer array is created in which the actual note values will be stored. It has 5 places to store a value because some chords have more 
         //than three notes, for example 7th chords, therefore it will be created having 5 storage spaces
@@ -58,7 +58,7 @@ public class AllChords
         chord.setActualNotes(actualNotes);
     }
     
-    public void createAllActualNotes()
+    private void createAllActualNotes()
     {
         for(SingleChordData chord : chords)
         {
@@ -68,6 +68,15 @@ public class AllChords
     
     public void printChords()
     {
-        chordNumbers.printChords(scale);
+        for(int chord : chordNumbers.getChordProgression())
+        {
+            if(chord==1||chord==2||chord==5)
+            {
+                System.out.println(scale.getAllNotes()[scale.getNotesInKey().get(chord)]+"m");
+            }else
+            {
+                System.out.println(scale.getAllNotes()[scale.getNotesInKey().get(chord)]);
+            }
+        }
     }
 }
