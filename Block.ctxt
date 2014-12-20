@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=blockStartTime
+comment0.target=Block(int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Block\r\n
+comment1.params=
+comment1.target=int\ getEndTime()
+comment2.params=
+comment2.target=int\ getStartTime()
+comment3.params=endTime
+comment3.target=void\ setEndTime(int)
+numComments=4

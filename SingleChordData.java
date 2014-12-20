@@ -1,6 +1,7 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class SingleChordData here.
+ * Note on time and off time removed because of it not belonging in this class
  * 
  * This class includes all data about one induvidual chord
  */
@@ -8,19 +9,15 @@ public class SingleChordData
 {
     // instance variables - replace the example below with your own
     private int relativeChordNumber;
-    private int noteOnTime;
-    private int noteOffTime;
     private int[] actualNotes;
-    private int[] theoreticalNotes;
+    private ArrayList<Integer> theoreticalNotes;
     
     /**
      * Constructor for objects of class SingleChordData
      */
-    public SingleChordData(int relativeChordNumber, int noteOnTime, int noteOffTime)
+    public SingleChordData(int relativeChordNumber)
     {
         this.relativeChordNumber = relativeChordNumber;
-        this.noteOnTime = noteOnTime;
-        this.noteOffTime = noteOffTime;
         actualNotes = null;
         theoreticalNotes = null;
     }
@@ -35,8 +32,13 @@ public class SingleChordData
         this.actualNotes = actualNotes;
     }
     
-    public void setTheoreticalNotes(int[] theoreticalNotes)
+    public void setTheoreticalNotes(ArrayList<Integer> theoreticalNotes)
     {
         this.theoreticalNotes = theoreticalNotes;
+    }
+    
+    public ArrayList<Integer> getTheoreticalNotes()
+    {
+        return theoreticalNotes;
     }
 }

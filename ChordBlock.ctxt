@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=startTime\ chords\ times
+comment0.target=ChordBlock(int,\ Chords,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ ChordBlock\r\n\ \r\n\ The\ integer\ times\ will\ not\ be\ processed\ in\ this\ class\ but\ has\ to\ be\ passed\ to\ here.\ It\ will\ be\ given\ later\ to\ classes\ that\ actually\ place\ all\ the\ notes\r\n
+comment1.params=scale
+comment1.target=ChordBlock(Scale)
+comment2.params=
+comment2.target=void\ setGlobalLayout()
+comment3.params=
+comment3.target=void\ printData()
+comment4.params=
+comment4.target=void\ printCompleteData()
+comment5.params=
+comment5.target=Chords\ getChords()
+comment6.params=
+comment6.target=void\ getRollingPiano()
+comment7.params=
+comment7.target=java.util.TreeMap\ getAllDataNotes()
+comment8.params=
+comment8.target=java.util.TreeMap\ getTheoreticalData()
+numComments=9

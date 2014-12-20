@@ -14,11 +14,13 @@ public class CreateChords
     //The start chord is the first chord in the chord progression, it is important to note that this is relative e.g I-VI. it is not a note, this can be done later.
     private int startChord;
     //The actual list of chord numbers.
-    private ArrayList<Integer> chordProgression;
+    protected ArrayList<SingleChordData> chordProgression;
     //How many chords long the progression has to be.
     private int lengthNumber;
     //What relative end chord number (I-VII)
     private int endChord;
+    
+    private static final int LENGTH = 8;
 
     /**
      * Constructor for objects of class CreateChordProgression
@@ -26,11 +28,21 @@ public class CreateChords
     public CreateChords()
     {
         startChord = RandomFunctions.randomInt(0,5);
-        lengthNumber = 8;
+        lengthNumber = LENGTH;
         endChord = 0;
-        chordProgression = new ArrayList<Integer>();
+        chordProgression = new ArrayList<SingleChordData>();
         create();
     }
+    
+    public CreateChords(int startChord, int lengthNumber, int endChord)
+    {
+        this.startChord = startChord;
+        this.lengthNumber = lengthNumber;
+        this.endChord = endChord;
+        chordProgression = new ArrayList<SingleChordData>();
+        create();
+    }
+
 
     /**
      * 
@@ -45,16 +57,16 @@ public class CreateChords
         do
         {
             chordProgression.clear();
-            chordProgression.add(startChord);
+            chordProgression.add(new SingleChordData(startChord));
             //A simple counter below, just in case something has to be measured
             int counter = 0;
             int keyFinalArray = 0;
             while(chordProgression.size()!=lengthNumber)
             {
-                int lastNote = chordProgression.get(chordProgression.size()-1);
+                int lastNote = chordProgression.get(chordProgression.size()-1).getRelativeChordNumber();
                 if(lastNote == 0 && counter < lengthNumber-2)
                 {
-                    chordProgression.add(RandomFunctions.randomInt(1,5));
+                    chordProgression.add(new SingleChordData(RandomFunctions.randomInt(1,5)));
                 }else{
                     if(lastNote==1)
                     {
@@ -70,15 +82,15 @@ public class CreateChords
                         keyFinalArray = RandomFunctions.odds(new int[] {33,33,34});
                     }
                     int[] addToChord = new int[] {1,3,5,0};
-                    chordProgression.add(MusicFunctions.resetBase(lastNote+addToChord[keyFinalArray]));
+                    chordProgression.add(new SingleChordData(MusicFunctions.resetBase(lastNote+addToChord[keyFinalArray])));
                 }
                 counter++;
             }
             if(endChord == -15)
             {
-                endChord = chordProgression.get(lengthNumber-1);
+                endChord = chordProgression.get(lengthNumber-1).getRelativeChordNumber();
             }
-        }while(chordProgression.size()!=lengthNumber||chordProgression.get(lengthNumber-1)!=endChord);
+        }while(chordProgression.size()!=lengthNumber||chordProgression.get(lengthNumber-1).getRelativeChordNumber()!=endChord);
     }
     
     public void setLength(int length)
@@ -96,14 +108,14 @@ public class CreateChords
     {
         if(index>=0&&index<chordProgression.size())
         {
-            return chordProgression.get(index);
+            return chordProgression.get(index).getRelativeChordNumber();
         }else
         {
             return -15;
         }
     }
     
-    public ArrayList<Integer> getChordProgression()
+    public ArrayList<SingleChordData> getChordProgression()
     {
         return chordProgression;
     }

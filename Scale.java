@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Scale
 {
     // instance variables - replace the example below with your own
-    private final String[] notes;
+    public static final String[] NOTES = new String[] {"A","A#","B","C","C#","D","D#","E","F","F#","G","G#"};
     private int keyOfSongNumber;
     private String keyOfSong;
     private ArrayList<Integer> notesInKey;
@@ -17,9 +17,8 @@ public class Scale
      */
     public Scale()
     {
-        notes = new String[] {"A","A#","B","C","C#","D","D#","E","F","F#","G","G#"};
         keyOfSongNumber = RandomFunctions.randomInt(0,11);
-        keyOfSong = notes[keyOfSongNumber];
+        keyOfSong = NOTES[keyOfSongNumber];
         notesInKey = new ArrayList<Integer>();
         setNotes();
     }
@@ -49,7 +48,7 @@ public class Scale
     {
         for(int note : notesInKey)
         {
-            System.out.println(notes[note]);
+            System.out.println(NOTES[note]);
         }
     }
     
@@ -61,7 +60,7 @@ public class Scale
     
     public String[] getAllNotes()
     {
-        return notes;
+        return NOTES;
     }
     
     public ArrayList<Integer> getNotesInKey()

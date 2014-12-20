@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=actualNote\ noteEndTime
+comment0.target=RawHardNotes(int,\ int)
+comment1.params=noteStartTime\ noteEndTime\ motherChord
+comment1.target=RawHardNotes(int,\ int,\ SingleChordData)
+comment10.params=
+comment10.target=int\ getNoteStartTime()
+comment2.params=actualNote
+comment2.target=void\ setActualNote(int)
+comment3.params=
+comment3.target=int\ getActualNote()
+comment4.params=noteEndTime
+comment4.target=void\ setNoteEndTime(int)
+comment5.params=
+comment5.target=int\ getNoteEndTime()
+comment6.params=
+comment6.target=int\ getNoteVelocity()
+comment7.params=velocity
+comment7.target=void\ setNoteVelocity(int)
+comment8.params=
+comment8.target=SingleChordData\ getMotherChord()
+comment9.params=motherChord
+comment9.target=void\ setMotherChord(SingleChordData)
+numComments=11

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=chord\ duration
+comment0.target=ChordDuration(SingleChordData,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ ChordDuration\r\n
+comment1.params=
+comment1.target=int\ getDuration()
+comment2.params=
+comment2.target=SingleChordData\ getChord()
+numComments=3

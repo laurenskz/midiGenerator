@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=strumType\ duration
+comment0.target=Strum(StrumType,\ int)
+comment1.params=
+comment1.target=StrumType\ getStrumType()
+comment2.params=strumType
+comment2.target=void\ setStrumType(StrumType)
+comment3.params=
+comment3.target=int\ getDuration()
+comment4.params=duration
+comment4.target=void\ setDuration(int)
+numComments=5

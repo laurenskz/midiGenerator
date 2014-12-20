@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MusicFunctions
+public abstract class MusicFunctions
 {    
     /**
      * Constructor for objects of class MusicFunctions
@@ -18,6 +18,14 @@ public class MusicFunctions
     {
         if(number>6){
             number-=7;
+        }
+        return number;
+    }
+    
+    public static int resetBaseNormalNotes(int number)
+    {
+        if(number>7){
+            number-=8;
         }
         return number;
     }

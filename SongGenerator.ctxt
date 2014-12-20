@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SongGenerator()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ SongGenerator\r\n
+comment1.params=
+comment1.target=void\ makeChords()
+comment2.params=
+comment2.target=void\ playAgain()
+numComments=3

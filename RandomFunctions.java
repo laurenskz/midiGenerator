@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RandomFunctions
+public abstract class RandomFunctions
 {
     /**
      * Constructor for objects of class RandomFunctions

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=data\ chords
+comment0.target=PianoModesGenerator(java.util.TreeMap,\ Chords)
+comment1.params=
+comment1.target=java.util.TreeMap\ getRollingPiano()
+comment10.params=
+comment10.target=void\ createMultipleTimes()
+comment2.params=
+comment2.target=void\ createSpecificChordDuration()
+comment3.params=entry
+comment3.target=int\ createOneChordDuration(java.util.Map.Entry)
+comment4.params=currentTime\ endTime
+comment4.target=int\ getWhatDurationsArePossible(int,\ int)
+comment4.text=\r\n\ Get\ what\ value\ wouldnt\ be\ longer\ than\ the\ time\ for\ the\ chord\r\n
+comment5.params=
+comment5.target=void\ fillDurationWithNotes()
+comment5.text=\r\n\ A\ nice\ feature\ about\ this\ method\ is\ that\ it\ takes\ in\ account\ note\ velocity.\ That\ makes\ the\ song\ a\ lot\ better.\r\n
+comment6.params=noteTime
+comment6.target=SpecialPoint\ getNoteType(int)
+comment7.params=TYPE\ entry
+comment7.target=void\ doActionBasedOnNoteType(SpecialPoint,\ java.util.Map.Entry)
+comment8.params=entry
+comment8.target=void\ doActionStartOfChord(java.util.Map.Entry)
+comment9.params=entry
+comment9.target=void\ defaultAction(java.util.Map.Entry)
+comment9.text=\r\n\ This\ method\ rests\ on\ a\ principal,\ notes\ are\ sorted\ into\ categories,\ there\ is\ a\ max\ and\ min\ note\ value,\ and\ the\ piece\ in\ between\ these\ to\ is\ divided\ into\r\n\ multiple\ pieces\ equal\ to\ the\ number\ of\ notes\ there\ are.\r\n
+numComments=11

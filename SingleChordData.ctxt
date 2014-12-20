@@ -1,11 +1,13 @@
 #BlueJ class context
-comment0.params=relativeChordNumber\ noteOnTime\ noteOffTime
-comment0.target=SingleChordData(int,\ int,\ int)
+comment0.params=relativeChordNumber
+comment0.target=SingleChordData(int)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ SingleChordData\r\n
 comment1.params=
 comment1.target=int\ getRelativeChordNumber()
 comment2.params=actualNotes
 comment2.target=void\ setActualNotes(int[])
 comment3.params=theoreticalNotes
-comment3.target=void\ setTheoreticalNotes(int[])
-numComments=4
+comment3.target=void\ setTheoreticalNotes(java.util.ArrayList)
+comment4.params=
+comment4.target=java.util.ArrayList\ getTheoreticalNotes()
+numComments=5

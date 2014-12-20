@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=data\ chords
+comment0.target=GuitarStrumGenerator(java.util.TreeMap,\ Chords)
+comment1.params=chord
+comment1.target=java.util.ArrayList\ getTheoreticalGuitarChord(SingleChordData)
+comment2.params=
+comment2.target=void\ generateStrumPattern()
+comment3.params=duration
+comment3.target=void\ createNewStrumPattern(int)
+numComments=4
