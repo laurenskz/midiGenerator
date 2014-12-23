@@ -54,6 +54,24 @@ public class GuitarStrumGenerator
         return tempNoteArray;
     }
     
+    private ArrayList<Integer> getPracticalGuitarChord(ArrayList<Integer> theoreticalChord)
+    {
+        int lastNote = 0;
+        ArrayList<Integer> notesToReturn = new ArrayList<Integer>();
+        for(int theoreticalNote : theoreticalChord)
+        {
+            int noteToAdd = scale.getNotesInKey().get(theoreticalNote);
+            noteToAdd += STARTING_OCTAVE;
+            while(noteToAdd <= lastNote)
+            {
+                noteToAdd += 12;
+            }
+            lastNote = noteToAdd;
+            notesToReturn.add(noteToAdd);
+        }
+        return notesToReturn;
+    }
+    
     private void generateStrumPattern()
     {
         for(ChordDuration chord : data.values())
@@ -70,12 +88,16 @@ public class GuitarStrumGenerator
         int currentTime = 0;
         ArrayList<Strum> strums = new ArrayList<>();
         strumPatterns.put(duration, strums);
+        //a simple counter to provide the possibility to stretch the last note till the end so that it is covered nicely
+        int counter = 0;
         while(currentTime<duration)
         {
             int currentStrumTime = POSSIBLE_STRUM_DURATIONS[random.nextInt(POSSIBLE_STRUM_DURATIONS.length)];
             if(currentStrumTime+currentTime>duration)
             {
                 //The new strum time value must not be added
+                break;
+                //The last strum will be lenghtened
             }else
             {
                 //Add it with a random up or down stroke
@@ -92,6 +114,13 @@ public class GuitarStrumGenerator
                 strums.add(new Strum(strumType, currentStrumTime));
                 
             }
+            counter++;
         }
     }
+    
+    private void makeAllData()
+    {
+            
+    }
+    
 }

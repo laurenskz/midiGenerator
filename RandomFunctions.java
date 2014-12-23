@@ -1,21 +1,12 @@
 
 /**
- * Write a description of class Chords here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * An abstract class containing only static functions, it contains functions used for random number generations.
  */
 public abstract class RandomFunctions
 {
     /**
-     * Constructor for objects of class RandomFunctions
-     * Nothing happens here because all of these functions are static
+     * This method returns a random number generated between the limits. It includes min and max.
      */
-    public RandomFunctions()
-    {
-
-    }
-    
     public static int randomInt(int min, int max)
     {
         if(min>max)
@@ -24,10 +15,14 @@ public abstract class RandomFunctions
         }
         max++;
         java.util.Random rand = new java.util.Random();
-        int randomNumber = rand.nextInt(max-min)+min;
+        int randomNumber = rand.nextInt(max-min+1)+min;
         return randomNumber;
     }
     
+    /**
+     * This method takes an input array of odds, and checks if the odd is met, if it is it returns the index of the number.
+     * If no odd is met it returns -15. (This can only happen if the odds combined are smaller than 100.
+     */
     public static int odds(int[] inputOddsArray)
     {
         int importantRand = RandomFunctions.randomInt(1,100);
