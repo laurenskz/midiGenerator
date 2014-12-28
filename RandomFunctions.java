@@ -15,7 +15,7 @@ public abstract class RandomFunctions
         }
         max++;
         java.util.Random rand = new java.util.Random();
-        int randomNumber = rand.nextInt(max-min+1)+min;
+        int randomNumber = rand.nextInt(max-min)+min;
         return randomNumber;
     }
     

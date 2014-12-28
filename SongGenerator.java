@@ -25,6 +25,7 @@ public class SongGenerator
     private void makeChords() throws InvalidMidiDataException, MidiUnavailableException 
     {
         ChordBlock chordBlock = new ChordBlock(scale);
+        chordBlock.getChords().printChords();
         chordBlock.getRollingPiano();
         Track track1 = song.getNewTrack();
         track1.add(new MidiEvent(new ShortMessage(192,8,INSTRUMENT,0),0));

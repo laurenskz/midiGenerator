@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 /**
- * Write a description of class AllChords here.
+ * This class extends createchords, after the chord Numbers have been created, with the use of a scale object the notes should be determined.
+ * This is done in this class.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Laurens op t Zandt) 
+ * @version (3)
  */
 public class Chords extends CreateChords
 {
@@ -12,6 +13,7 @@ public class Chords extends CreateChords
 
     /**
      * Constructor for objects of class AllChords
+     * It generates a chord Number progression and assigns the notes to it.
      */
     public Chords()
     {
@@ -23,18 +25,12 @@ public class Chords extends CreateChords
     
     /**
      * Constructor for objects of class AllChords
+     * It generates a chord Number progression and assigns the notes to it.
+     * A scale parameter is used to make sure it has the scale you want
      */
     public Chords(Scale scale)
     {
         super();
-        this.scale = scale;
-        createAllActualNotes();
-        createAllTheoreticalNotes();
-    }
-    
-    public Chords(Scale scale, int startChord, int lengthNumber, int endChord)
-    {
-        super(startChord, lengthNumber, endChord);
         this.scale = scale;
         createAllActualNotes();
         createAllTheoreticalNotes();
@@ -85,6 +81,9 @@ public class Chords extends CreateChords
         }
     }
     
+    /**
+     * Prints the chord progression
+     */
     public void printChords()
     {
         for(SingleChordData fullChord : super.getChordProgression())
@@ -100,6 +99,9 @@ public class Chords extends CreateChords
         }
     }
     
+    /**
+     * Returns the scale of this chord progression
+     */
     public Scale getScale()
     {
         return scale;

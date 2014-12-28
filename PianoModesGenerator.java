@@ -17,8 +17,8 @@ public class PianoModesGenerator
     private static final int MIN_VELOCITY_VALUE = 50;
     private static final int MAX_VELOCITY_VALUE = 90;
     private static final int[] possibleNoteDurations = new int[] {24,48,96,192};
-    private static final int MIN_NUMBER_OF_NOTES = 50;
-    private static final int MAX_NUMBER_OF_NOTES = 1;
+    private static final int MIN_NUMBER_OF_NOTES = 1;
+    private static final int MAX_NUMBER_OF_NOTES = 3;
     
     public PianoModesGenerator(TreeMap<Integer, ChordDuration> data, Chords chords)
     {
@@ -59,7 +59,7 @@ public class PianoModesGenerator
             }
             //Get how many notes should be playing starting at this point, the notes will all be given a random duration.
             //Then the virtual 'place' where this 'cursor' is will be continued by a random amount which will not be bigger than the longest note.
-            int numberOfNotes = random.nextInt(MAX_NUMBER_OF_NOTES)+MIN_NUMBER_OF_NOTES;
+            int numberOfNotes = random.nextInt(MAX_NUMBER_OF_NOTES-MIN_NUMBER_OF_NOTES+1)+MIN_NUMBER_OF_NOTES;
             int[] temporaryNoteArray = new int[numberOfNotes];
             //Create a TreeMap entry to store the notes
             actualNotes.put(currentTime, new ArrayList<>());

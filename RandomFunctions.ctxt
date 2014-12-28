@@ -1,9 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=RandomFunctions()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ RandomFunctions\r\n\ Nothing\ happens\ here\ because\ all\ of\ these\ functions\ are\ static\r\n
-comment1.params=min\ max
-comment1.target=int\ randomInt(int,\ int)
-comment2.params=inputOddsArray
-comment2.target=int\ odds(int[])
-numComments=3
+comment0.params=min\ max
+comment0.target=int\ randomInt(int,\ int)
+comment0.text=\r\n\ This\ method\ returns\ a\ random\ number\ generated\ between\ the\ limits.\ It\ includes\ min\ and\ max.\r\n
+comment1.params=inputOddsArray
+comment1.target=int\ odds(int[])
+comment1.text=\r\n\ This\ method\ takes\ an\ input\ array\ of\ odds,\ and\ checks\ if\ the\ odd\ is\ met,\ if\ it\ is\ it\ returns\ the\ index\ of\ the\ number.\r\n\ If\ no\ odd\ is\ met\ it\ returns\ -15.\ (This\ can\ only\ happen\ if\ the\ odds\ combined\ are\ smaller\ than\ 100.\r\n
+numComments=2

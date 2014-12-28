@@ -1,16 +1,17 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Scale()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Scale\r\n
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Scale.\ \r\n\ It\ creates\ a\ new\ scale\ and\ sets\ the\ notes\ which\ are\ in\ that\ scale\ which\ can\ be\ gotten\ by\ getNotesInKey()\r\n
 comment1.params=
 comment1.target=void\ setNotes()
-comment1.text=\r\n\ \r\n
+comment1.text=\r\n\ This\ method\ sets\ the\ notes\ which\ are\ in\ the\ selected\ key\r\n
 comment2.params=
 comment2.target=void\ printNotes()
-comment3.params=key
-comment3.target=void\ setKey(int)
+comment2.text=\r\n\ This\ method\ prints\ all\ the\ notes\ which\ are\ in\ the\ selected\ key.\r\n
+comment3.params=
+comment3.target=java.lang.String[]\ getAllNotes()
+comment3.text=\r\n\ This\ method\ returns\ an\ array\ from\ notes\ displayed\ as\ String\ values\r\n
 comment4.params=
-comment4.target=java.lang.String[]\ getAllNotes()
-comment5.params=
-comment5.target=java.util.ArrayList\ getNotesInKey()
-numComments=6
+comment4.target=java.util.ArrayList\ getNotesInKey()
+comment4.text=\r\n\ This\ method\ returns\ an\ array\ list\ of\ the\ theoretical\ notes\ which\ are\ in\ the\ selected\ key.\r\n
+numComments=5

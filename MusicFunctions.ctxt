@@ -1,11 +1,11 @@
 #BlueJ class context
-comment0.params=
-comment0.target=MusicFunctions()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ MusicFunctions\r\n
+comment0.params=number
+comment0.target=int\ resetBase(int)
+comment0.text=\r\n\ This\ methods\ resets\ base\ for\ chords.\ Chord\ Numbers\ that\ is.\ It\ goes\ back\ from\ G\ to\ A\ in\ chords.\r\n
 comment1.params=number
-comment1.target=int\ resetBase(int)
+comment1.target=int\ resetBaseNormalNotes(int)
+comment1.text=\r\n\ This\ method\ resets\ base\ for\ normal\ notes,\ It\ goes\ back\ from\ G\#\ to\ A.\r\n
 comment2.params=number
-comment2.target=int\ resetBaseNormalNotes(int)
-comment3.params=number
-comment3.target=int\ resetBaseForAllNotes(int)
-numComments=4
+comment2.target=int\ resetBaseForAllNotes(int)
+comment2.text=\r\n\ This\ method\ returns\ base\ for\ all\ notes,\ when\ no\ scale\ is\ selected\ yet,\ it\ is\ used\ to\ get\ the\ notes\ in\ the\ scale.\r\n
+numComments=3

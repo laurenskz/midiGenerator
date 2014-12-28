@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 /**
- * Write a description of class Scale here.
+ * A class containing all data about a scale. It can be passed to other classes to make sure specific objects are in the same scale. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Laurens op t Zandt) 
+ * @version (1)
  */
 public class Scale
 {
@@ -16,8 +16,8 @@ public class Scale
     //An array List of Integer containing the integer values which represent the notes in the key
     private ArrayList<Integer> notesInKey;
     /**
-     * Constructor for objects of class Scale.
-     * It creates a new scale and sets 
+     * Constructor for objects of class Scale. 
+     * It creates a new scale and sets the notes which are in that scale which can be gotten by getNotesInKey()
      */
     public Scale()
     {
@@ -28,7 +28,7 @@ public class Scale
     }
 
     /**
-     * 
+     * This method sets the notes which are in the selected key
      */
     public void setNotes()
     {
@@ -48,6 +48,9 @@ public class Scale
         }
     }
     
+    /**
+     * This method prints all the notes which are in the selected key.
+     */
     public void printNotes()
     {
         for(int note : notesInKey)
@@ -56,17 +59,17 @@ public class Scale
         }
     }
     
-    public void setKey(int key)
-    {
-        keyOfSongNumber = key;
-        setNotes();
-    }
-    
+    /**
+     * This method returns an array from notes displayed as String values
+     */
     public String[] getAllNotes()
     {
         return NOTES;
     }
     
+    /**
+     * This method returns an array list of the theoretical notes which are in the selected key.
+     */
     public ArrayList<Integer> getNotesInKey()
     {
         return notesInKey;

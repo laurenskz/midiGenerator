@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 /**
- * Write a description of class CreateChordProgression here.
+ * This class creates an arrayList of chordNumbers, they are pseudo randomly generated and should in theory sound good.
  * 
  * I-VII is represented as 0-6 (Integer)
  * The VII is never used because it doesnt sound very good
  * Note, for this class an ArrayList is
  * endChord can be set to -15 if the ending chord desired does not matter.
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Laurens op t Zandt) 
+ * @version (1)
  */
 public class CreateChords
 {
@@ -20,35 +20,24 @@ public class CreateChords
     //What relative end chord number (I-VII)
     private int endChord;
     
-    private static final int LENGTH = 8;
+    private static final int MIN_LENGTH = 4;
+    private static final int MAX_LENGTH = 12;
 
     /**
      * Constructor for objects of class CreateChordProgression
+     * It creates an arrayList with chordNumbers
      */
     public CreateChords()
     {
-        startChord = RandomFunctions.randomInt(0,5);
-        lengthNumber = LENGTH;
+        startChord = RandomFunctions.randomInt(0,0);
+        lengthNumber = RandomFunctions.randomInt(MIN_LENGTH, MAX_LENGTH);
         endChord = 0;
         chordProgression = new ArrayList<SingleChordData>();
         create();
     }
     
-    public CreateChords(int startChord, int lengthNumber, int endChord)
-    {
-        this.startChord = startChord;
-        this.lengthNumber = lengthNumber;
-        this.endChord = endChord;
-        chordProgression = new ArrayList<SingleChordData>();
-        create();
-    }
-
-
     /**
-     * 
-     * 
-     *
-     * 
+     * Creates the chord number progression.
      */
     public void create()
     {
@@ -93,17 +82,26 @@ public class CreateChords
         }while(chordProgression.size()!=lengthNumber||chordProgression.get(lengthNumber-1).getRelativeChordNumber()!=endChord);
     }
     
+    /**
+     * Determines how long the chord progression has to be
+     */
     public void setLength(int length)
     {
         lengthNumber = length;
         create();
     }
     
+    /**
+     * Returns the size of the chord progression
+     */
     public int getSize()
     {
         return chordProgression.size();
     }
     
+    /**
+     * Returns the chord at the specified index, if the specified index is valid.
+     */
     public int getChord(int index)
     {
         if(index>=0&&index<chordProgression.size())
@@ -115,6 +113,9 @@ public class CreateChords
         }
     }
     
+    /**
+     * Returns the arrayList of chordnumbers
+     */
     public ArrayList<SingleChordData> getChordProgression()
     {
         return chordProgression;
